@@ -45,7 +45,7 @@
 		$sum=0;
 		$num = [[5, 45, 8], [12, 1, 11]];
 			for ($i=0;$i<count($num);$i++){
-   			$sum+=array_sum($num[$i]); //найти сумму многомерного массива
+   			$sum+=array_sum($num[$i]);
 }
 		echo 'summary all elements ' .$sum;
 
