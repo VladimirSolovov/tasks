@@ -2,7 +2,7 @@
 <html>
  <head>
   <meta charset="utf-8">
-  <title>Погода на <?echo date('l jS \of F Y h:i:s G');?></title>
+  <title>Погода на <?echo date('l jS \of F Y H:i:s ');?></title>
  </head>
  <body>
 

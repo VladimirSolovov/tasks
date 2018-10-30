@@ -7,8 +7,9 @@
  <body>
 
 
-    <li><a href="zadaniya/index.php">Задания из файла</a></li>
-    <li><a href="json/index.php">Записная книжка</a></li>
-    <li><a href="weather/index.php">Погодный информер</a></li>
+    <li><a href="zadaniya">Задания из файла</a></li>
+    <li><a href="json">Записная книжка</a></li>
+    <li><a href="weather">Погодный информер</a></li>
+    <li><a href="weather/nobootstrap_weather/index.php">Погодный информер без оформления</a></li>
 
 </body>
