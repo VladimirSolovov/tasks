@@ -12,14 +12,9 @@ $file = file_get_contents('http://api.openweathermap.org/data/2.5/weather?id=479
 				
 $json = json_decode($file);
 ?>
-<p><em><span style="font-size:22px">Температура: <?=$json->main->temp?>℃</span></em></p>
-<p><em><span style="font-size:22px">Давление: <?=$json->main->pressure*0.75?> мм рт. ст.</span></em></p>
-<p><em><span style="font-size:22px">Скорость ветра: <?=$json->wind->speed?> м/c</span></em></p>
-<p><em><span style="font-size:22px">Влажность: <?=$json->main->humidity?> %</span></em></p>
-<p><em><span style="font-size:22px">Состояние атмосферы: <?=$json->weather[0]->description?></span></em></p>
+<p><em><span style="font-size:30px">В Ульяновске сейчас:</span></em></p>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
