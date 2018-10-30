@@ -43,9 +43,9 @@
 <h2>task 10</h2>
 	<?php
 		$sum=0;
-		$num = [[5, 45, 8], [12, 1, 11]];
+		$num = [[5, 45, 8], [12, 1, 11]]; //найти сумму многомерного массива
 			for ($i=0;$i<count($num);$i++){
-   			$sum+=array_sum($num[$i]);
+   			$sum+=array_sum($num[$i]); 
 }
 		echo 'summary all elements ' .$sum;
 
