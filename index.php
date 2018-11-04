@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
- <head>
-  <meta charset="utf-8">
-  <title>Задания</title>
- </head>
- <body>
+      <head>
+  		<meta charset="utf-8">
+  			<title>Задания</title>
+	  </head>
+<body>
 
 
     <li><a href="zadaniya">Задания из файла</a></li>
