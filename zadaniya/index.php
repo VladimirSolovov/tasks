@@ -122,14 +122,3 @@
 	?>
 
 <h2>task 2</h2>
-	<?php
-		$text = 'Phasellus gravida fermentum pellentesque. Aenean non neque mollis nisl dapibus eleifend. Sed interdum dui nec dictum elementum. Proin eget semper dolor, ut commodo nibh. Quisque vitae pharetra ligula. Sed dictum, sem sed pellentesque aliquam, tellus sapien dapibus magna, eu suscipit lacus augue sed velit. Ut vehicula sagittis nulla, et aliquet elit. Quisque tincidunt sem nibh, finibus dictum nisl vulputate quis. In vitae nisl et lacus pulvinar ornare id ac libero. Morbi pharetra fringilla erat ut lacinia.';
-		$tword = explode(' ', $text);
-		foreach ($tword as $nsym) {
-			$lonsym = strlen($nsym);
-		if ($lonsym >=7){
-			$rest = substr(6,0);
-		}
-	}
-			
-	?>
