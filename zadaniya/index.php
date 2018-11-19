@@ -3,7 +3,7 @@
 			$text = "1a2b3c4b5d6e7f8g9h0";
 			$zreplace = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
 			$str1 = '';
-			$strrep = str_replace($zreplace, $str1, $text); //Ğ”Ğ°Ğ½Ğ° ÑÑ‚Ñ€Ğ¾ĞºĞ° Ñ Ğ±ÑƒĞºĞ²Ğ°Ğ¼Ğ¸ Ğ¸ Ñ†Ğ¸Ñ„Ñ€Ğ°Ğ¼Ğ¸, Ğ½Ğ°Ğ¿Ñ€Ğ¸Ğ¼ĞµÑ€, '1a2b3c4b5d6e7f8g9h0'. Ğ£Ğ´Ğ°Ğ»Ğ¸Ñ‚Ğµ Ğ¸Ğ· Ğ½ĞµĞµ Ğ²ÑĞµ Ñ†Ğ¸Ñ„Ñ€Ñ‹. Ğ¢Ğ¾ ĞµÑÑ‚ÑŒ Ğ² Ğ½Ğ°ÑˆĞµĞ¼ ÑĞ»ÑƒÑ‡Ğ°Ğµ Ğ´Ğ¾Ğ»Ğ¶Ğ½Ğ° Ğ¿Ğ¾Ğ»ÑƒÑ‡Ğ¸Ñ‚ÑÑ ÑÑ‚Ñ€Ğ¾ĞºĞ° 'abcbdefgh'
+			$strrep = str_replace($zreplace, $str1, $text); //Äàíà ñòğîêà ñ áóêâàìè è öèôğàìè, íàïğèìåğ, '1a2b3c4b5d6e7f8g9h0'. Óäàëèòå èç íåå âñå öèôğû. Òî åñòü â íàøåì ñëó÷àå äîëæíà ïîëó÷èòñÿ ñòğîêà 'abcbdefgh'
 		echo $text;
 	?>
 		<pre>
@@ -15,7 +15,7 @@
 
 	<?php
 		$image = 'icon.jpg';
-		$search = 'jpg'; //Ğ”Ğ°Ğ½Ğ° ÑÑ‚Ñ€Ğ¾ĞºĞ°. ĞŸÑ€Ğ¾Ğ²ĞµÑ€ÑŒÑ‚Ğµ, Ñ‡Ñ‚Ğ¾ Ğ¾Ğ½Ğ° Ğ·Ğ°ĞºĞ°Ğ½Ñ‡Ğ¸Ğ²Ğ°ĞµÑ‚ÑÑ Ğ½Ğ° '.png' Ğ¸Ğ»Ğ¸ Ğ½Ğ° '.jpg'. Ğ•ÑĞ»Ğ¸ ÑÑ‚Ğ¾ Ñ‚Ğ°Ğº, Ğ²Ñ‹Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ 'Ğ´Ğ°', ĞµÑĞ»Ğ¸ Ğ½Ğµ Ñ‚Ğ°Ğº - 'Ğ½ĞµÑ‚'
+		$search = 'jpg'; //Äàíà ñòğîêà. Ïğîâåğüòå, ÷òî îíà çàêàí÷èâàåòñÿ íà '.png' èëè íà '.jpg'. Åñëè ıòî òàê, âûâåäèòå 'äà', åñëè íå òàê - 'íåò'
 			if(substr($image, strlen($image)-strlen($search))){
 			echo 'yes';
 		}
@@ -38,12 +38,12 @@
 <h2>task 11</h2>
 	<?php
 		$str = 'london is the capital of great britain';
-		echo ucwords($str); //Ğ”Ğ°Ğ½Ğ° ÑÑ‚Ñ€Ğ¾ĞºĞ° 'london is the capital of great britain'. Ğ¡Ğ´ĞµĞ»Ğ°Ğ¹Ñ‚Ğµ Ğ¸Ğ· Ğ½ĞµĞµ ÑÑ‚Ñ€Ğ¾ĞºÑƒ 'London Is The Capital Of Great Britain'
+		echo ucwords($str); //Äàíà ñòğîêà 'london is the capital of great britain'. Ñäåëàéòå èç íåå ñòğîêó 'London Is The Capital Of Great Britain'
 	?>
 <h2>task 10</h2>
 	<?php
 		$sum=0;
-		$num = [[5, 45, 8], [12, 1, 11]]; //Ğ½Ğ°Ğ¹Ñ‚Ğ¸ ÑÑƒĞ¼Ğ¼Ñƒ Ğ¼Ğ½Ğ¾Ğ³Ğ¾Ğ¼ĞµÑ€Ğ½Ğ¾Ğ³Ğ¾ Ğ¼Ğ°ÑÑĞ¸Ğ²Ğ°
+		$num = [[5, 45, 8], [12, 1, 11]]; //íàéòè ñóììó ìíîãîìåğíîãî ìàññèâà
 			for ($i=0;$i<count($num);$i++){
    			$sum+=array_sum($num[$i]); 
 }
@@ -79,8 +79,20 @@
 		} 
 		print_r($Arrsum);
 	?>
-
-
+<h2>task 5</h2>
+	<?php
+		$str = 'Phasellus gravida fermentum pellentesque. Aenean non neque mollis nisl dapibus eleifend';
+		$word = explode(' ', $str);
+		$max_symb = max(iconv_strlen($word)); //äîáàâèòü ïîèñê ìàêñèìàëüíîãî ñëîâà
+		foreach ($word as $ssymb) {
+			$long = strlen($ssymb);
+			if ($long >= $max_symb){
+				 echo '<strong>'.$ssymb.'</strong>';
+			}else{
+			echo $ssymb.' '; 
+			} 
+		}
+	?>
 <h2>task 4</h2>
 	<?php
 		$arrword = explode('_', 'var_test_text');
@@ -93,3 +105,20 @@
 			}
 		echo $str;
 	?>
+<h2>task 3</h2>
+	<?php
+		$password = 'gj575';
+		$lpass = strlen($password);
+		$str = strlen(preg_replace("/[^0-9]/", '', $password));
+		if ($str <= 2){
+     	 	echo "Â ïàğîëå äîëæíî áûòü áîëüøå 2 öèôğ";
+    	}else if ($lpass < 5){
+      		echo "ïàğîëü äîëæåí ñîñòîÿòü ìèíèìóì èç 5 ñèìâîëîâ";
+    	}else if ($lpass >10){
+     		echo "ïàğîëü äîëæåí ñîñòîÿòü ìàêñèìóì èç 10 ñèìâîëîâ";
+		}else{
+ 			echo "Íàäåæíûé ïàğîëü";
+		}		
+	?>
+
+<h2>task 2</h2>
