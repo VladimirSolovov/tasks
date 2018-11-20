@@ -3,7 +3,7 @@
 			$text = "1a2b3c4b5d6e7f8g9h0";
 			$zreplace = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
 			$str1 = '';
-			$strrep = str_replace($zreplace, $str1, $text); //Äàíà ñòğîêà ñ áóêâàìè è öèôğàìè, íàïğèìåğ, '1a2b3c4b5d6e7f8g9h0'. Óäàëèòå èç íåå âñå öèôğû. Òî åñòü â íàøåì ñëó÷àå äîëæíà ïîëó÷èòñÿ ñòğîêà 'abcbdefgh'
+			$strrep = str_replace($zreplace, $str1, $text); //Ğ”Ğ°Ğ½Ğ° ÑÑ‚Ñ€Ğ¾ĞºĞ° Ñ Ğ±ÑƒĞºĞ²Ğ°Ğ¼Ğ¸ Ğ¸ Ñ†Ğ¸Ñ„Ñ€Ğ°Ğ¼Ğ¸, Ğ½Ğ°Ğ¿Ñ€Ğ¸Ğ¼ĞµÑ€, '1a2b3c4b5d6e7f8g9h0'. Ğ£Ğ´Ğ°Ğ»Ğ¸Ñ‚Ğµ Ğ¸Ğ· Ğ½ĞµĞµ Ğ²ÑĞµ Ñ†Ğ¸Ñ„Ñ€Ñ‹. Ğ¢Ğ¾ ĞµÑÑ‚ÑŒ Ğ² Ğ½Ğ°ÑˆĞµĞ¼ ÑĞ»ÑƒÑ‡Ğ°Ğµ Ğ´Ğ¾Ğ»Ğ¶Ğ½Ğ° Ğ¿Ğ¾Ğ»ÑƒÑ‡Ğ¸Ñ‚ÑÑ ÑÑ‚Ñ€Ğ¾ĞºĞ° 'abcbdefgh'
 		echo $text;
 	?>
 		<pre>
@@ -15,7 +15,7 @@
 
 	<?php
 		$image = 'icon.jpg';
-		$search = 'jpg'; //Äàíà ñòğîêà. Ïğîâåğüòå, ÷òî îíà çàêàí÷èâàåòñÿ íà '.png' èëè íà '.jpg'. Åñëè ıòî òàê, âûâåäèòå 'äà', åñëè íå òàê - 'íåò'
+		$search = 'jpg'; //Ğ”Ğ°Ğ½Ğ° ÑÑ‚Ñ€Ğ¾ĞºĞ°. ĞŸÑ€Ğ¾Ğ²ĞµÑ€ÑŒÑ‚Ğµ, Ñ‡Ñ‚Ğ¾ Ğ¾Ğ½Ğ° Ğ·Ğ°ĞºĞ°Ğ½Ñ‡Ğ¸Ğ²Ğ°ĞµÑ‚ÑÑ Ğ½Ğ° '.png' Ğ¸Ğ»Ğ¸ Ğ½Ğ° '.jpg'. Ğ•ÑĞ»Ğ¸ ÑÑ‚Ğ¾ Ñ‚Ğ°Ğº, Ğ²Ñ‹Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ 'Ğ´Ğ°', ĞµÑĞ»Ğ¸ Ğ½Ğµ Ñ‚Ğ°Ğº - 'Ğ½ĞµÑ‚'
 			if(substr($image, strlen($image)-strlen($search))){
 			echo 'yes';
 		}
@@ -38,12 +38,12 @@
 <h2>task 11</h2>
 	<?php
 		$str = 'london is the capital of great britain';
-		echo ucwords($str); //Äàíà ñòğîêà 'london is the capital of great britain'. Ñäåëàéòå èç íåå ñòğîêó 'London Is The Capital Of Great Britain'
+		echo ucwords($str); //Ğ”Ğ°Ğ½Ğ° ÑÑ‚Ñ€Ğ¾ĞºĞ° 'london is the capital of great britain'. Ğ¡Ğ´ĞµĞ»Ğ°Ğ¹Ñ‚Ğµ Ğ¸Ğ· Ğ½ĞµĞµ ÑÑ‚Ñ€Ğ¾ĞºÑƒ 'London Is The Capital Of Great Britain'
 	?>
 <h2>task 10</h2>
 	<?php
 		$sum=0;
-		$num = [[5, 45, 8], [12, 1, 11]]; //íàéòè ñóììó ìíîãîìåğíîãî ìàññèâà
+		$num = [[5, 45, 8], [12, 1, 11]]; //Ğ½Ğ°Ğ¹Ñ‚Ğ¸ ÑÑƒĞ¼Ğ¼Ñƒ Ğ¼Ğ½Ğ¾Ğ³Ğ¾Ğ¼ĞµÑ€Ğ½Ğ¾Ğ³Ğ¾ Ğ¼Ğ°ÑÑĞ¸Ğ²Ğ°
 			for ($i=0;$i<count($num);$i++){
    			$sum+=array_sum($num[$i]); 
 }
@@ -79,11 +79,27 @@
 		} 
 		print_r($Arrsum);
 	?>
+<h2>task 6</h2>
+<?php
+	$arr3 = [1, 1, 1, 3, 3, 3, 2, 4, 4];
+	$newArr2 = [];
+	$elems = count($arr3);
+	for ($i = 0; $i < $elems; $i++) {
+		$value = $arr3[$i];
+		unset($arr3[$i]);
+		if (in_array($value, $arr3)) {
+			$newArr2[] = $value;
+		}
+		$arr3[$i] = $value;
+	}
+	$arr3 = $newArr2;
+	echo var_dump($arr3);
+?>
 <h2>task 5</h2>
 	<?php
 		$str = 'Phasellus gravida fermentum pellentesque. Aenean non neque mollis nisl dapibus eleifend';
 		$word = explode(' ', $str);
-		$max_symb = max(iconv_strlen($word)); //äîáàâèòü ïîèñê ìàêñèìàëüíîãî ñëîâà
+		$max_symb = max(array_map('strlen', $word));
 		foreach ($word as $ssymb) {
 			$long = strlen($ssymb);
 			if ($long >= $max_symb){
@@ -92,7 +108,7 @@
 			echo $ssymb.' '; 
 			} 
 		}
-	?>
+?>
 <h2>task 4</h2>
 	<?php
 		$arrword = explode('_', 'var_test_text');
@@ -111,14 +127,29 @@
 		$lpass = strlen($password);
 		$str = strlen(preg_replace("/[^0-9]/", '', $password));
 		if ($str <= 2){
-     	 	echo "Â ïàğîëå äîëæíî áûòü áîëüøå 2 öèôğ";
+     	 	echo "Ğ’ Ğ¿Ğ°Ñ€Ğ¾Ğ»Ğµ Ğ´Ğ¾Ğ»Ğ¶Ğ½Ğ¾ Ğ±Ñ‹Ñ‚ÑŒ Ğ±Ğ¾Ğ»ÑŒÑˆĞµ 2 Ñ†Ğ¸Ñ„Ñ€";
     	}else if ($lpass < 5){
-      		echo "ïàğîëü äîëæåí ñîñòîÿòü ìèíèìóì èç 5 ñèìâîëîâ";
+      		echo "Ğ¿Ğ°Ñ€Ğ¾Ğ»ÑŒ Ğ´Ğ¾Ğ»Ğ¶ĞµĞ½ ÑĞ¾ÑÑ‚Ğ¾ÑÑ‚ÑŒ Ğ¼Ğ¸Ğ½Ğ¸Ğ¼ÑƒĞ¼ Ğ¸Ğ· 5 ÑĞ¸Ğ¼Ğ²Ğ¾Ğ»Ğ¾Ğ²";
     	}else if ($lpass >10){
-     		echo "ïàğîëü äîëæåí ñîñòîÿòü ìàêñèìóì èç 10 ñèìâîëîâ";
+     		echo "Ğ¿Ğ°Ñ€Ğ¾Ğ»ÑŒ Ğ´Ğ¾Ğ»Ğ¶ĞµĞ½ ÑĞ¾ÑÑ‚Ğ¾ÑÑ‚ÑŒ Ğ¼Ğ°ĞºÑĞ¸Ğ¼ÑƒĞ¼ Ğ¸Ğ· 10 ÑĞ¸Ğ¼Ğ²Ğ¾Ğ»Ğ¾Ğ²";
 		}else{
- 			echo "Íàäåæíûé ïàğîëü";
+ 			echo "ĞĞ°Ğ´ĞµĞ¶Ğ½Ñ‹Ğ¹ Ğ¿Ğ°Ñ€Ğ¾Ğ»ÑŒ";
 		}		
 	?>
 
 <h2>task 2</h2>
+	<?php
+		$txt = 'Phasellus gravida fermentum pellentesque. Aenean non neque mollis nisl dapibus eleifend. Sed interdum dui nec dictum elementum. Proin eget semper dolor, ut commodo nibh. Quisque vitae pharetra ligula. Sed dictum, sem sed pellentesque aliquam, tellus sapien dapibus magna, eu suscipit lacus augue sed velit. Ut vehicula sagittis nulla, et aliquet elit. Quisque tincidunt sem nibh, finibus dictum nisl vulputate quis. In vitae nisl et lacus pulvinar ornare id ac libero. Morbi pharetra fringilla erat ut lacinia.';
+		$words = explode(' ', $txt);
+			foreach ($words as $wsymb) {
+				echo mb_strimwidth("$wsymb ", 0, 9, "* ");
+			}
+?>
+<h2>task 1</h2>
+	<?php
+		$text2 = 'Phasellus gravida fermentum pellentesque. Aenean non neque mollis nisl dapibus eleifend. Sed interdum dui nec dictum elementum. Proin eget semper dolor, ut commodo nibh. Quisque vitae pharetra ligula. Sed dictum, sem sed pellentesque aliquam, tellus sapien dapibus magna, eu suscipit lacus augue sed velit. Ut vehicula sagittis nulla, et aliquet elit. Quisque tincidunt sem nibh, finibus dictum nisl vulputate quis. In vitae nisl et lacus pulvinar ornare id ac libero. Morbi pharetra fringilla erat ut lacinia.';
+		$textarray = explode(' ', $text2);
+		sort($textarray, SORT_STRING);
+		foreach ($textarray as $valueword){
+		echo $valueword;}
+?>
