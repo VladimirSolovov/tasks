@@ -139,10 +139,11 @@
 	?>
 <h2>task 1</h2>
 	<?php
-		$text2 = 'Phasellus gravida fermentum pellentesque. Aenean non neque mollis nisl dapibus eleifend. Sed interdum dui nec dictum elementum. Proin eget semper dolor, ut commodo nibh. Quisque vitae pharetra ligula. Sed dictum, sem sed pellentesque aliquam, tellus sapien dapibus magna, eu suscipit lacus augue sed velit. Ut vehicula sagittis nulla, et aliquet elit. Quisque tincidunt sem nibh, finibus dictum nisl vulputate quis. In vitae nisl et lacus pulvinar ornare id ac libero. Morbi pharetra fringilla erat ut lacinia.';		
+		$text2 = 'Phasellus gravida fermentum pellentesque. Aenean non neque mollis nisl dapibus eleifend. Sed interdum dui nec dictum elementum. Proin eget semper dolor, ut commodo nibh. Quisque vitae pharetra ligula. Sed dictum, sem sed pellentesque aliquam, tellus sapien dapibus magna, eu suscipit lacus augue sed velit. Ut vehicula sagittis nulla, et aliquet elit. Quisque tincidunt sem nibh, finibus dictum nisl vulputate quis. In vitae nisl et lacus pulvinar ornare id ac libero. Morbi pharetra fringilla erat ut lacinia.';
+		$text2 = ucwords($text2);		
 		$nodottxt = str_replace([',', '.'], '', $text2);	//убрал знаки препинания, иначе сортировка начинается заново после 												   после каждого символа
 		$textarray = array_unique(explode(' ', $nodottxt));
-		natcasesort($textarray);;
+		natcasesort($textarray);
 		$headletter = $textarray[0][0];
 		print_r($headletter);
 		foreach ($textarray as $wrd) {
