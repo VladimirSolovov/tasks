@@ -139,13 +139,17 @@
 	?>
 <h2>task 1</h2>
 	<?php
-		$text2 = 'Phasellus gravida fermentum pellentesque. Aenean non neque mollis nisl dapibus eleifend. Sed interdum dui nec dictum elementum. Proin eget semper dolor, ut commodo nibh. Quisque vitae pharetra ligula. Sed dictum, sem sed pellentesque aliquam, tellus sapien dapibus magna, eu suscipit lacus augue sed velit. Ut vehicula sagittis nulla, et aliquet elit. Quisque tincidunt sem nibh, finibus dictum nisl vulputate quis. In vitae nisl et lacus pulvinar ornare id ac libero. Morbi pharetra fringilla erat ut lacinia.';
-		$repl = [',', '.'];
-		$bckspc = '';
-		$nodottxt = str_replace($repl, $bckspc, $text2);
-		$textarray = explode(' ', $nodottxt);
-		natcasesort($textarray);
-		foreach ($textarray as $valueword){
-
-			print_r($valueword)?><br><?;}
+		$text2 = 'Phasellus gravida fermentum pellentesque. Aenean non neque mollis nisl dapibus eleifend. Sed interdum dui nec dictum elementum. Proin eget semper dolor, ut commodo nibh. Quisque vitae pharetra ligula. Sed dictum, sem sed pellentesque aliquam, tellus sapien dapibus magna, eu suscipit lacus augue sed velit. Ut vehicula sagittis nulla, et aliquet elit. Quisque tincidunt sem nibh, finibus dictum nisl vulputate quis. In vitae nisl et lacus pulvinar ornare id ac libero. Morbi pharetra fringilla erat ut lacinia.';		
+		$nodottxt = str_replace([',', '.'], '', $text2);	//убрал знаки препинания, иначе сортировка начинается заново после 												   после каждого символа
+		$textarray = array_unique(explode(' ', $nodottxt));
+		natcasesort($textarray);;
+		$headletter = $textarray[0][0];
+		print_r($headletter);
+		foreach ($textarray as $wrd) {
+			if ($wrd[0] != $headletter){
+				$headletter = $wrd[0];
+				echo $headletter ?><br><?;
+			}
+			echo $wrd ?><br><?;
+		}
 	?>
