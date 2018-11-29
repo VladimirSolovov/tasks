@@ -8,7 +8,7 @@
 <body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-<form>
+<form action="input.php" method="POST">
   <div class="form-group">
     <label for="name">Имя</label>
     <input type="text" class="form-control" id="name" name="name" placeholder="Введите имя">
@@ -25,6 +25,7 @@
     <label for="phone">Телефон</label></br>
     <input type="text" class="input-medium bfh-phone" id="phone" name="phone" placeholder="+79011234567">	
   </div>
+  	<input type="submit" value="Отправить">
 </form>
 </body>
 </html>
