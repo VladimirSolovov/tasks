@@ -10,20 +10,20 @@
     <script src="js/bootstrap.min.js"></script>
     <form>
   <div class="form-group">
-    <label for="formGroupExampleInput">Имя</label>
-    <input type="text" class="form-control" id="formGroupExampleInput" aria-describedby="emailHelp" placeholder="Введите имя">
+    <label for="Input">Имя</label>
+    <input type="text" class="form-control" id="name" name="name" placeholder="Введите имя">
   </div>
   <div class="form-group">
-    <label for="formGroupExampleInput">Фамилия</label>
-    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Введите фамилию">
+    <label for="Input">Фамилия</label>
+    <input type="text" class="form-control" id="surname" name="surname" placeholder="Введите фамилию">
       </div>
   <div class="form-group">
-    <label for="formGroupExampleInput">Адрес</label>
-    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Введите адрес">
+    <label for="Input">Адрес</label>
+    <input type="text" class="form-control" id="address" name="address" placeholder="Введите адрес">
       </div>
   <div class="form-group">
-    <label for="formGroupExampleInput">Телефон</label></br>
-    <input type="text" class="input-medium bfh-phone" placeholder="+79011234567">
+    <label for="Input">Телефон</label></br>
+    <input type="number" class="input-medium bfh-phone" id="phone" name="phone" placeholder="+79011234567">
   </div>
 </body>
 </html>
