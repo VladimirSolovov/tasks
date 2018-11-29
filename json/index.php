@@ -7,9 +7,11 @@ $data = json_decode($json_data,true);
 <head>
     <title>Телефонная книга</title>
     <meta charset="utf-8">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 <div class="container">
 <table class="table table-hover">
   <thead class="thead-inverse">
@@ -35,5 +37,6 @@ $data = json_decode($json_data,true);
         </tbody>
     </table>
 </div>
+<a class="btn btn-primary" href="forms.php" role="button" style="margin-left: 165px";">Заполнить форму</a>
 </body>
 </html>
