@@ -8,22 +8,23 @@
 <body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <form>
+<form>
   <div class="form-group">
-    <label for="Input">Имя</label>
+    <label for="Name">Имя</label>
     <input type="text" class="form-control" id="name" name="name" placeholder="Введите имя">
   </div>
   <div class="form-group">
-    <label for="Input">Фамилия</label>
+    <label for="Surname">Фамилия</label>
     <input type="text" class="form-control" id="surname" name="surname" placeholder="Введите фамилию">
-      </div>
+   </div>
   <div class="form-group">
-    <label for="Input">Адрес</label>
+    <label for="Address">Адрес</label>
     <input type="text" class="form-control" id="address" name="address" placeholder="Введите адрес">
-      </div>
-  <div class="form-group">
-    <label for="Input">Телефон</label></br>
-    <input type="number" class="input-medium bfh-phone" id="phone" name="phone" placeholder="+79011234567">
   </div>
+  <div class="form-group">
+    <label for="Phone">Телефон</label></br>
+    <input type="text" class="input-medium bfh-phone" id="phone" name="phone" placeholder="+79011234567">	
+  </div>
+</form>
 </body>
 </html>
