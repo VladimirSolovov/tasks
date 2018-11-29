@@ -10,19 +10,19 @@
     <script src="js/bootstrap.min.js"></script>
 <form>
   <div class="form-group">
-    <label for="Name">Имя</label>
+    <label for="name">Имя</label>
     <input type="text" class="form-control" id="name" name="name" placeholder="Введите имя">
   </div>
   <div class="form-group">
-    <label for="Surname">Фамилия</label>
+    <label for="surname">Фамилия</label>
     <input type="text" class="form-control" id="surname" name="surname" placeholder="Введите фамилию">
    </div>
   <div class="form-group">
-    <label for="Address">Адрес</label>
+    <label for="address">Адрес</label>
     <input type="text" class="form-control" id="address" name="address" placeholder="Введите адрес">
   </div>
   <div class="form-group">
-    <label for="Phone">Телефон</label></br>
+    <label for="phone">Телефон</label></br>
     <input type="text" class="input-medium bfh-phone" id="phone" name="phone" placeholder="+79011234567">	
   </div>
 </form>
