@@ -1,7 +1,7 @@
-<!DOCTYPE html>
+п»ї<!DOCTYPE html>
 <html>
 <head>
-    <title>Заполнение информации</title>
+    <title>Р—Р°РїРѕР»РЅРµРЅРёРµ РёРЅС„РѕСЂРјР°С†РёРё</title>
     <meta charset="utf-8">
 <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
@@ -10,20 +10,20 @@
     <script src="js/bootstrap.min.js"></script>
     <form>
   <div class="form-group">
-    <label for="exampleInputEmail1">Имя</label>
-    <input type="email" class="form-control" id="formGroupExampleInput" aria-describedby="emailHelp" placeholder="Введите имя">
+    <label for="formGroupExampleInput">РРјСЏ</label>
+    <input type="text" class="form-control" id="formGroupExampleInput" aria-describedby="emailHelp" placeholder="Р’РІРµРґРёС‚Рµ РёРјСЏ">
   </div>
   <div class="form-group">
-    <label for="exampleInputPassword1">Фамилия</label>
-    <input type="password" class="form-control" id="formGroupExampleInput" placeholder="Введите фамилию">
+    <label for="formGroupExampleInput">Р¤Р°РјРёР»РёСЏ</label>
+    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Р’РІРµРґРёС‚Рµ С„Р°РјРёР»РёСЋ">
       </div>
   <div class="form-group">
-    <label for="exampleInputPassword1">Адрес</label>
-    <input type="password" class="form-control" id="formGroupExampleInput" placeholder="Введите адрес">
+    <label for="formGroupExampleInput">РђРґСЂРµСЃ</label>
+    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Р’РІРµРґРёС‚Рµ Р°РґСЂРµСЃ">
       </div>
   <div class="form-group">
-    <label for="formGroupExampleInput">Телефон</label>
-    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="+7(901)123-45-67">
+    <label for="formGroupExampleInput">РўРµР»РµС„РѕРЅ</label></br>
+    <input type="text" class="input-medium bfh-phone" placeholder="+79011234567">
   </div>
 </body>
 </html>
