@@ -1,7 +1,12 @@
 ﻿<?php
-$jsonarr = $_POST;
-$delsymbol = [' ', '<', '>', '\r', '\n'];
-$nullsymbol = '';
-$jsonarr = str_replace($delsymbol, $nullsymbol, $jsonarr);
-file_put_contents('userdata.json', json_encode($jsonarr));
+$oldjson = file_get_contents('data.json');
+$jsonarr = json_decode($oldjson, TRUE);
+unset($oldjson);
+$jsonarr[] = $_POST;
+foreach ($jsonarr as $k => $val)
+{
+	$$k = (empty($_POST[$k])) ? 'default' : strip_tags($val);
+}
+file_put_contents('data.json', json_encode($jsonarr));
+unset($jsonarr);
 ?>
