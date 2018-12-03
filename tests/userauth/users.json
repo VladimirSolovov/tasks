@@ -1,1 +1,1 @@
-{"name":"admin","password":"admin","submit":"","0":{"name":"user","password":"user","submit":""},"1":{"name":"user","password":"user","submit":""},"2":{"name":"user","password":"user","submit":""}}
+[{"name":"admin","password":"admin","submit":""},{"name":"user","password":"user","submit":""}]

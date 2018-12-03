@@ -5,6 +5,12 @@ if(!$_POST['name'] || !$_POST['password']){
 }
 $oldjson = file_get_contents('userauth/users.json');
 $jsonarr = json_decode($oldjson, TRUE);
+foreach ($jsonarr as $key => $val) {
+	if($val['name'] == $_POST['name']){
+		echo "Пользователь с таким именем существует";
+	die();
+	}
+}
 $jsonarr[] = [
     'name'      => isset($_POST['name']) ? filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING) : '',
     'password'  => isset($_POST['password']) ? filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING) : '',
