@@ -6,7 +6,7 @@
     <link href="css/style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<form action="registration.php" method="post">
+<form action="enter.php" method="post">
     <div class="row">
         <label for="name">Логин:</label>
         <input type="text" class="text" name="name" id="name" />
