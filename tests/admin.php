@@ -11,7 +11,7 @@ if(isset($_FILES['userfile']['name']))
 	}else{
 		$uploaddir = getcwd(). '/tests/' . $name;
 		if(file_exists($uploaddir)){
-			echo "Файл $name уже существуетю Выберите другой файл!</br>";
+			echo "Файл $name уже существует Выберите другой файл!</br>";
 		}else{
 			$tmp_name = $_FILES['userfile']['tmp_name'];
 			move_uploaded_file($tmp_name, $uploaddir);
@@ -39,6 +39,7 @@ if(isset($_FILES['userfile']['name']))
 		<button type="submit" value="Отправить файл">Отправить файл</button>
 	</fieldset>
 	<p><a href="list.php">Перейти к списку доступных тестов</a></p>>
+        </div>
 </form>
 </div>
 </body>
