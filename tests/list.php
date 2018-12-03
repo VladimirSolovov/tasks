@@ -23,8 +23,12 @@ function getList($filelist){
 </head>
 	<body>
 		<div>
+			Вы авторизированны как: <?= $_SESSION['user_name'] ?>
+			<a href="/tests/enter.php?action=logout">Выйти</a>
 			<?php getList($filelist)?>
-			<p><a href="admin.php">Загрузить новый тест</a></p>
+			<? if($_SESSION['user_name'] == 'admin'){ ?>
+				<p><a href="admin.php">Загрузить новый тест</a></p>
+			<? } ?>
 </div>
 </body>
 </html>

@@ -19,6 +19,6 @@
         <input type="submit" name="submit" id="btn-submit" value="Авторизоваться" />
     </div>
 </form>
-<p class="to_reg">Если вы не зарегистрированы в системе, <a href="form_register.php">зарегистрируйтесь</a>.</p>
+<p class="to_reg">Если вы не зарегистрированы в системе, <a href="form_register.php">зарегистрируйтесь</a></p>
 </body>
 </html>
