@@ -1,46 +1,39 @@
 ﻿<?php
-if(isset($_FILES['userfile']['name']))
-{
-	$error = $_FILES['userfile']['error'];
-	if(!$error){
-		$name = basename($_FILES['userfile']['name']);
+	include '/templates/header.php';
+if($_GET['action'] == 'add'){
+	if(isset($_FILES['file']['name']))
+	{
+		$name = basename($_FILES['file']['name']);
 		$type = strtolower(substr($name, 1+strpos($name, ".")));
-		$extentions = "json";
-		if($type != $extentions)
-			echo "Файл имеет недопустимое расширение";
-	}else{
-		$uploaddir = getcwd(). '/tests/' . $name;
-		if(file_exists($uploaddir)){
-			echo "Файл $name уже существует Выберите другой файл!</br>";
+
+		if($type != "json"){
+			$_SESSION['message'] ='Файл имеет недопустимое расширение';
 		}else{
-			$tmp_name = $_FILES['userfile']['tmp_name'];
-			move_uploaded_file($tmp_name, $uploaddir);
-			echo "Файл $name успешно отправлен!</br>";
+			$uploaddir = getcwd(). '/tests/' . $name;
+
+			if(file_exists($uploaddir)){
+				$_SESSION['message'] = "Файл ".$name." уже существует Выберите другой файл!";
+			}else{
+				$tmp_name = $_FILES['file']['tmp_name'];
+				move_uploaded_file($tmp_name, $uploaddir);
+				$_SESSION['message'] = "Файл $name успешно отправлен!";
+			}
 		}
-		}
-}elseif (empty(($_FILES['username']['name']))){
-	echo "Файл не выбран\n";
-}else{
-	echo "Ошибка загрузка файла!\n";
+	}
 }
+	
 ?>
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Загрузить файл теста</title>
-		<meta charset="utf-8">
-	</head>
-<body>
 	<div> 
-	<form enctype="multipart/form-data" action="list.php" method="post">
-	<fieldset>
-		<legend><strong>Выберите файл для загрузки:</strong></legend>
-		<input name="name" type="file" placeholder="Выбрать файл с тестом:"/>
-		<button type="submit" value="Отправить файл">Отправить файл</button>
-	</fieldset>
-	<p><a href="list.php">Перейти к списку доступных тестов</a></p>>
-        </div>
-</form>
-</div>
-</body>
-</html>
+		<form enctype="multipart/form-data" action="/tests/admin.php?action=add" method="post">
+			<fieldset>
+				<legend><strong>Выберите файл для загрузки:</strong></legend>
+				<input name="file" type="file" placeholder="Выбрать файл с тестом:"/>
+				<button type="submit" value="Отправить файл">Отправить файл</button>
+			</fieldset>
+			<p><a href="/tests/">Перейти к списку доступных тестов</a></p>
+		        </div>
+		</form>
+	</div>
+<?php
+	include '/templates/footer.php';
+?>
