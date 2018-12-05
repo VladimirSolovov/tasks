@@ -11,7 +11,9 @@ if(isset($_SESSION['username'])){
 			for($i=0; $i<(count($filelist)-2); $i++){
 				echo '<li>' . $filelist[$i];
 				echo '<a href="view.php?namefile=' . $filelist[$i] . '"> Посмотреть </a>';
-				echo '<a href="delete.php?namefile=' . $filelist[$i] . '">Удалить</a></li>';
+				if($_SESSION['username'] == 'admin'){
+					echo '<a href="delete.php?namefile=' . $filelist[$i] . '">Удалить</a></li>';
+				}				
 			}
 			echo "</ol>";
 		}

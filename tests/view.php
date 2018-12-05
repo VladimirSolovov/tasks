@@ -1,12 +1,6 @@
-﻿<?php
+<?php
 include '/templates/header.php';
-$findfile = ($_GET['namefile']);
-$dir = 'tests/';
-$files = scandir($dir);
-foreach ($files as $file) {
-	if($file == $findfile)
-		$a = json_decode($file);
-}
-print_r($a);
+$file = file_get_contents(__DIR__.'/tests/'.$_GET['namefile']);
+$data = json_decode($file, true);
 include '/templates/footer.php';
 ?>
