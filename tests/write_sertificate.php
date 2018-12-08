@@ -1,6 +1,6 @@
 <?php
 session_start();
-$im = imagecreatefromjpeg('sertifikat2_5aa75edb2858d.jpg');
+$im = imagecreatefromjpeg('http://10liski.detkin-club.ru/images/custom_1/sertifikat2_5aa75edb2858d.jpg');
 $black = imagecolorallocate($im, 0x00, 0x00, 0x00);
 $font_file = './9690.ttf';
 $text = 'Уважаемый ' . $_SESSION['username'] . ' !
