@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+п»ї<!DOCTYPE html>
 <html>
       <head>
   		<meta charset="utf-8">
-  			<title>Задания</title>
+  			<title>Р—Р°РґР°РЅРёСЏ</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	  </head>
 <body>
@@ -10,143 +10,212 @@
 <script src="http://bootstraptema.ru/plugins/jquery/jquery-1.11.3.min.js"></script>
 <script src="http://bootstraptema.ru/plugins/2016/easing/jquery.easing.min.js"></script>
 <style>
-body{background-color:#222}
-.menu{
- float:left;
+.btn {		
+	position: relative;	
+	padding: 1.4rem 4.2rem;
+	padding-right: 3.1rem;
+	font-size: 1.4rem;
+	color: var(--inv);
+	letter-spacing: 1.1rem;
+	text-transform: uppercase;
+	transition: all 600ms cubic-bezier(0.77, 0, 0.175, 1);	
+	cursor: pointer;
+	user-select: none;
 }
-.menu{
-margin:4em 2em;
-}
-.box{
- position:absolute;
- top:-1200px;
- width:100%;
- color:#fff;
- margin:auto;
- padding:0px;
- z-index:999999;
- text-align:right;
- left:0;
-}
-a.boxclose{
- cursor: pointer;
- text-align: center;
- display: block;
- position: absolute;
- top: 46px;
- right: 320px;
-}
-.menu_box_list {
- display: inline-block;
- float: right;
- margin-right: 35em;
-}
-.menu_box_list ul li {
- display:inline-block;
-}
-.menu_box_list li a{
- color: #fff;
- font-size: 1.2em;
- font-weight:400;
- display: block;
- padding:0.5em 0.5em;
- text-decoration:none;
- text-transform: uppercase;
- -webkit-transition: all 0.5s ease-in-out;
- -moz-transition: all 0.5s ease-in-out;
- -o-transition: all 0.5s ease-in-out;
- transition: all 0.5s ease-in-out;
- letter-spacing: 0.1em;
-}
-.menu_box_list li a:hover,.menu_box_list ul li.active a{
- color:#E74C3C;
-}
-.menu_box_list ul {
- background:transparent;
- padding:50px;
-}
-.menu_box_list li a > i > img{
- vertical-align:middle;
- padding-right:10px;
-}
-@media (max-width:1280px){ 
-a.boxclose {
- right: 190px;
-}
-.menu_box_list {
- margin-right: 25em;
-}
-}
-@media (max-width:1024px){ 
-a.boxclose {
- right: 104px;
-}
-.menu_box_list {
- margin-right: 14em;
-}
-}
-@media (max-width:768px){ 
-.menu_box_list {
- margin-right: 3em;
-}
-a.boxclose {
- right: 28px;
- top:18px;
-}
-.menu_box_list ul li {
- display:block;
-}
-.menu_box_list ul {
- background:transparent;
- padding:1em 20em;
- margin:28px 0px;
- text-align:center;
-}
-}
-@media (max-width:640px){ 
-.menu_box_list ul {
-padding: 1em 15em;
-}
-}
-@media (max-width:480px){ 
-.menu_box_list ul {
- padding: 1em 9.5em;
-}
-}
-@media (max-width:320px){ 
-a.boxclose {
- right: 15px;
- top: 4px;
-}
-.menu_box_list ul {
- padding: 0em 5.2em;
- margin: 14px 0px;
-}
-.menu_box_list li a {
- padding: 0.4em 0.5em;
-}
-.menu_box_list {
- margin-right: 1em;
-}
-}
-</style>
 
-<div class="menu"> 
- <a href="#" id="activator"><img src="http://bootstraptema.ru/snippets/menu/2016/button/menu.png" alt="" /></a>
+.btn:before, .btn:after {
+	content: '';
+	position: absolute;	
+	transition: inherit;
+	z-index: -1;
+}
+
+.btn:hover {
+	color: var(--def);
+	transition-delay: .6s;
+}
+
+.btn:hover:before {
+	transition-delay: 0s;
+}
+
+.btn:hover:after {
+	background: var(--inv);
+	transition-delay: .4s;
+}
+
+/* From Top */
+
+.from-top:before, 
+.from-top:after {
+	left: 0;
+	height: 0;
+	width: 100%;
+}
+
+.from-top:before {
+	bottom: 0;	
+	border: 1px solid var(--inv);
+	border-top: 0;
+	border-bottom: 0;
+}
+
+.from-top:after {
+	top: 0;
+	height: 0;
+}
+
+.from-top:hover:before,
+.from-top:hover:after {
+	height: 100%;
+}
+
+/* From Left */
+
+.from-left:before, 
+.from-left:after {
+	top: 0;
+	width: 0;
+	height: 100%;
+}
+
+.from-left:before {
+	right: 0;
+	border: 1px solid var(--inv);
+	border-left: 0;
+	border-right: 0;	
+}
+
+.from-left:after {
+	left: 0;
+}
+
+.from-left:hover:before,
+.from-left:hover:after {
+	width: 100%;
+}
+
+/* From Right */
+
+.from-right:before, 
+.from-right:after {
+	top: 0;
+	width: 0;
+	height: 100%;
+}
+
+.from-right:before {
+	left: 0;
+	border: 1px solid var(--inv);
+	border-left: 0;
+	border-right: 0;	
+}
+
+.from-right:after {
+	right: 0;
+}
+
+.from-right:hover:before,
+.from-right:hover:after {
+	width: 100%;
+}
+
+/* From Middle */
+
+.from-middle:before {
+	top: 0;
+	left: 50%;
+	height: 100%;
+	width: 0;
+	border: 1px solid var(--inv);
+	border-left: 0;
+	border-right: 0;
+}
+
+.from-middle:after {
+	bottom: 0;
+	left: 0;
+	height: 0;
+	width: 100%;
+	background: var(--inv);
+}
+
+.from-middle:hover:before {
+	left: 0;
+	width: 100%;
+}
+
+.from-middle:hover:after {
+	top: 0;
+	height: 100%;
+}
+
+/* From Bottom */
+
+.from-bottom:before, 
+.from-bottom:after {
+	left: 0;
+	height: 0;
+	width: 100%;
+}
+
+.from-bottom:before {
+	top: 0;	
+	border: 1px solid var(--inv);
+	border-top: 0;
+	border-bottom: 0;
+}
+
+.from-bottom:after {
+	bottom: 0;
+	height: 0;
+}
+
+.from-bottom:hover:before,
+.from-bottom:hover:after {
+	height: 100%;
+}
+
+
+/* ~~~~~~~~~~~~ GLOBAL SETTINGS ~~~~~~~~~~~~ */
+
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+body {
+	--def: #96B7C4; 	
+	--inv: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 100vh;
+	width: 100%;
+	background-image: linear-gradient(-25deg, #f6fcd6 0%, #96B7C4 100%);
+}
+
+html {
+	font-size: 12px;
+	font-family: 'Playfair Display', serif;
+}
+
+div {margin-bottom: 3rem;}
+div:last-child {margin-bottom: 0;}
+</style>
  <div class="box" id="box">
  <div class="box_content">
  <div class="menu_box_list">
  <ul>
-    	<li><a href="zadaniya">Задания из файла</a></li>
-    	<li><a href="json">Записная книжка</a></li>
-    	<li><a href="tests">Тесты</a></li>
-    	<li><a href="weather">Погодный информер</a></li>
-    	<li><a href="weather/nobootstrap_weather/index.php">Погодный информер без оформления</a></li>
-    	<li><a href="php720">PHP720</a></li>
+    	<li><div class="btn from-left"> <a href="zadaniya">Р—Р°РґР°РЅРёСЏ РёР· С„Р°Р№Р»Р°</a></div>
+    	<li><div class="btn from-right"> <a href="json">Р—Р°РїРёСЃРЅР°СЏ РєРЅРёР¶РєР°</a></div>
+    	<li><div class="btn from-middle"><a href="tests">РўРµСЃС‚С‹ </a></div>
+    	<li><div class="btn from-bottom"><a href="weather">РџРѕРіРѕРґРЅС‹Р№ РёРЅС„РѕСЂРјРµСЂ</a></div>
+    	<li><div class="btn from-top"> <a href="weather/nobootstrap_weather/index.php">РџРѕРіРѕРґРЅС‹Р№ РёРЅС„РѕСЂРјРµСЂ Р±РµР· РѕС„РѕСЂРјР»РµРЅРёСЏ</a></div>
+    	<li><div class="btn from-left"> <a href="php720">PHP720</a></div>
  <div class="clearfix"></div>
  </ul>
  </div>
- <a class="boxclose" id="boxclose"><img src="http://bootstraptema.ru/snippets/menu/2016/button/close.png" alt="" /></a>
  </div> 
  </div>
  
